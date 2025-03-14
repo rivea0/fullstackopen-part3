@@ -1,14 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
-const cors = require('cors');
 
 const app = express();
 
-const corsOptions = {
-  origin: ['http://localhost:5173']
-};
-
-app.use(cors(corsOptions));
+app.use(express.static('dist'));
 app.use(express.json());
 app.use(morgan(function (tokens, req, res) {
   // If the method is POST, add the body of request,
@@ -54,10 +49,6 @@ let personEntries = [
 const generateId = () => {
   return Math.floor(Math.random() * 100000).toString();
 }
-
-app.get('/', (request, response) => {
-  response.send('<h1>Hello world!</h1>');
-});
 
 app.get('/info', (request, response) => {
   const numPersons = personEntries.length;

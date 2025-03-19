@@ -1,7 +1,7 @@
-PUT http://localhost:3001/api/persons/67d9f3fe48d426103c30d221
+PUT http://localhost:3001/api/persons/67da8cf7207053e98bd7f2ec
 Content-Type: application/json
 
 {
-    "name": "Dale Cooper",
-    "number": "88-88-888888"
+    "name": "Audrey",
+    "number": "040-22334435"
 }

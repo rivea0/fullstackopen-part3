@@ -1,7 +1,7 @@
-POST https://fullstackopen-part3-sbt4.onrender.com/api/persons
+POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-    "name": "Dale Cooper",
-    "number": "11-22-345678"
+    "name": "Test person",
+    "number": "11-22-345670"
 }
